@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E4E9F7;
+  font-family: cursive;
+
+}
+.container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin: 10px;
+}
+.img-container img{
+  width: 500px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+.text-container {
+  text-align: center;
+}
+button {
+  padding: 10px 20px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 10px;
+}
+button:hover {
+  filter: brightness(90%);
+}
+
+/* Sign in Pop Up Style */
+
+.active.container {
+  filter: blur(5px) brightness(0.7);
+}
+
+.popup-container {
+  position: fixed;
+  left: 50%;
+  width: 400px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("https://images.unsplash.com/photo-1607368386669-d940ce438fba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  transition: .7s;
+}
+h4 {
+  font-size: 30px;
+  margin: 10px 0;
+  font-family: sans-serif;
+  color: greenyellow;
+  font-weight: bold;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+label {
+  color: greenyellow;
+  font-weight: bold;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+}
+.max-100 {
+  width: 100%;
+}
+.popup-btn {
+  background-color: orangered;
+  border: 2px solid;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+}
+.input {
+  border: 2px solid;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.input::placeholder {
+  color: lightgrey;
+}
+.close-icon {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+.close-icon:hover {
+  color: orangered;
+  transition: .1s;
+}
+.active.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
+}
+.password-container {
+  position: relative;
+}
+.password-container input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.password-container .icon-eye {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* sign-up pop up style */
+
+.popup-container-for-sign-up {
+  position: fixed;
+  left: 50%;
+  width: 400px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("https://images.unsplash.com/photo-1607368386669-d940ce438fba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  transition: .7s;
+}
+.active.popup-container-for-sign-up {
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
+}
+.close-icon-sign-up {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    padding: 40px;
+  }
+  
+  .img-container img {
+    width: 100%;
+  }
+  
+  
+  .popup-container-for-sign-up {
+    width: 80%;
+  }
+  .popup-container {
+    width: 80%;
+  }
+}
